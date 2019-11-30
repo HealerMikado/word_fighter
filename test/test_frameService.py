@@ -78,7 +78,7 @@ class TestFrameService(TestCase):
             self.assertEqual(actual_frame.degat, 77)
 
     @mock.patch('service.random_service.RandomService.generate_int_number',
-                return_value=11)
+                return_value=51)
     def test_generateFrameEsquive(self, generate_int_number):
         """
         Clairement une méthode difficile à tester à cause du random.

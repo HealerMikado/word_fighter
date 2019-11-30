@@ -34,7 +34,7 @@ class CombattantService():
                                      precision=precision, defense=defense,
                                      esquive=esquive,
                                      critical=critical,
-                                     initiative=initiative,
+                                     vitesse=initiative,
                                      niveau=1,
                                      points_de_vie_max=points_de_vie)
 

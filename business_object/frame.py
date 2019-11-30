@@ -16,17 +16,17 @@ class Frame:
         output = ""
         if self.est_critique:
             output = "{attaquant} lance {nom_attaque} à {defenseur} et inflige {deg} dégâts!!!".format(
-                attaquant=self.attaquant,
+                attaquant=self.attaquant.nom,
                 nom_attaque=self.attaquant.nom_attaque_speciale,
-                defenseur=self.defenseur,
+                defenseur=self.defenseur.nom,
                 deg=self.degat)
         elif self.est_esquive:
             output = "{defenseur} esquive gracieusement l'attaque".format(
-                defenseur=self.defenseur)
+                defenseur=self.defenseur.nom)
         else:
             output = "{attaquant} donne {nom_attaque} {defenseur} et inflige {deg} dégâts".format(
-                attaquant=self.attaquant,
-                defenseur=self.defenseur,
-                nom_attaque=self.nom_attaque,
+                attaquant=self.attaquant.nom,
+                defenseur=self.defenseur.nom,
+                nom_attaque=self.attaque_defaut,
                 deg=self.degat)
         return output

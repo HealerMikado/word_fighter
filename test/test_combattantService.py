@@ -20,17 +20,17 @@ class TestCombattantService(TestCase):
             niveau=1,
             points_de_vie_max=740,
             precision=87,
-            initiative=64
+            vitesse=64
         )
         self.assertEqual(expected_combattant.nom, actual_combattant.nom)
         self.assertEqual(expected_combattant.attaque, actual_combattant.attaque)
         self.assertEqual(expected_combattant.defense, actual_combattant.defense)
         self.assertEqual(expected_combattant.esquive, actual_combattant.esquive)
-        self.assertEqual(expected_combattant.points_de_vie,
-                         actual_combattant.points_de_vie)
+        self.assertEqual(expected_combattant.points_de_vie_max,
+                         actual_combattant.points_de_vie_max)
         self.assertEqual(expected_combattant.precision,
                          actual_combattant.precision)
-        self.assertEqual(expected_combattant.initiative,
-                         actual_combattant.initiative)
+        self.assertEqual(expected_combattant.vitesse,
+                         actual_combattant.vitesse)
         self.assertEqual(expected_combattant.critical,
                          actual_combattant.critical)

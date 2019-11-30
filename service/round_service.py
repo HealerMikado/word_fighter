@@ -32,12 +32,16 @@ class RoundService:
                            self.round.second_attaquant)
         CombattantService.infliger_degats(self.round.second_attaquant,
                                           self.round.frames[-1].degat)
+        self.round.set__pv_final_second_attaquant(
+            self.round.second_attaquant.points_de_vie_actuel)
         if not self.combat_service.est_combat_termine():
             # seconde attaque du round
             self.round_attaque(self.round.second_attaquant,
                                self.round.premier_attaquant)
             CombattantService.infliger_degats(self.round.premier_attaquant,
                                               self.round.frames[-1].degat)
+            self.round.set__pv_final_premier_attaquant(
+                self.round.premier_attaquant.points_de_vie_actuel)
             self.combat_service.est_combat_termine()
         return self.round
 
