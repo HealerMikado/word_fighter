@@ -1,9 +1,12 @@
+from business_object.attaque import Attaque
+
+
 class Combattant:
     def __init__(self, nom, attaque=0, precision=0, defense=0,
                  esquive=0, critical=0, points_de_vie_max=0, vitesse=0,
                  niveau=1,
                  arme=None,
-                 armure=None, nom_attaque_speciale="Critical",
+                 armure=None, nom_attaque_speciale=Attaque("Critical", "un"),
                  accessoires=[None]):
         self.nom = nom
         self.attaque = attaque

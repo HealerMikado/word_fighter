@@ -24,7 +24,8 @@ class Frame:
             output = "{defenseur} esquive gracieusement l'attaque".format(
                 defenseur=self.defenseur.nom)
         else:
-            output = "{attaquant} donne {nom_attaque} {defenseur} et inflige {deg} dégâts".format(
+            output = "{attaquant} donne {nom_attaque} à {defenseur} et " \
+                     "inflige {deg} dégâts".format(
                 attaquant=self.attaquant.nom,
                 defenseur=self.defenseur.nom,
                 nom_attaque=self.attaque_defaut,

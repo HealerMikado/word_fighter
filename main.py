@@ -1,12 +1,12 @@
 from combattant_prégénérés import son_goku
 from view.abstract_view import AbstractView
-from view.main_menu import MainMenu
+from view.create_character_view import CreateCharacterView
 
 if __name__ == '__main__':
 
     AbstractView.session.combattant = son_goku.son_goku
     # on démarre sur l'écran accueil
-    current_vue = MainMenu()
+    current_vue = CreateCharacterView()
 
     # tant qu'on a un écran à afficher, on continue
     while current_vue:
