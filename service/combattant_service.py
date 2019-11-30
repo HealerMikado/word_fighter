@@ -62,3 +62,7 @@ class CombattantService():
         :return:
         """
         combattant.points_de_vie_actuel -= degat
+
+    @staticmethod
+    def remise_a_zero_degat(combattant):
+        combattant.points_de_vie_actuel = combattant.points_de_vie_max

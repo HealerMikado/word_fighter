@@ -1,4 +1,5 @@
 from business_object.combat import Combat
+from service.combattant_service import CombattantService
 from service.round_service import RoundService
 
 
@@ -25,6 +26,8 @@ class CombatService:
         """
         while not self.combat.gagnant:
             self.new_round()
+        CombattantService.remise_a_zero_degat(self.combat.combattant1)
+        CombattantService.remise_a_zero_degat(self.combat.combattant2)
 
     def est_combat_termine(self):
         """
